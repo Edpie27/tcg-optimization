@@ -1,0 +1,12 @@
+#use this program when you want to reference a product key
+
+import pandas as pd
+tcg = pd.read_csv(r"C:\Program Files (x86)\Steam\steamapps\common\TCG Card Shop Simulator\BepInEx\config\ShopSense\shops\heigui-kala-kards\sales.csv")
+keys = tcg.loc[:,['key','name']]
+keys.set_index("key")
+keys.drop_duplicates(inplace = True)
+print(keys) # use data viewer for a more cleaner table in debug mode
+
+
+
+

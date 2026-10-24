@@ -1,0 +1,11 @@
+import pandas as pd
+tcg = pd.read_csv(r"C:\Program Files (x86)\Steam\steamapps\common\TCG Card Shop Simulator\BepInEx\config\ShopSense\shops\heigui-kala-kards\sales.csv")
+# print(tcg)
+
+#create and export a new csv that only contains units sold
+units = tcg.loc[:,['day','name','units']]
+
+units.to_csv(r"C:\Users\eddyc\OneDrive - University at Buffalo\Desktop\tcg_optimization\tcg-optimization\inital-prototype\csv's\units_sold.csv",index = False)
+
+
+
